@@ -163,5 +163,41 @@ footer {
   }
   p {
     font-size: 1.1rem;
+    opacity: 0.6;
+  }
+}
+.buy {
+  border-radius: 50%;
+  background-color: rgb(23, 228, 23);
+  color: white;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(21, 201, 21);
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px, 300px);
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6";
+    /* display: flex;
+    flex-direction: column;
+    .item {
+      height: 300px;
+    } */
   }
 }
