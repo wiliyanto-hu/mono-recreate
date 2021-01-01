@@ -1,0 +1,45 @@
+@mixin nav-btn($width, $yPosition) {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: $width;
+  background-color: black;
+  transform: translateY($yPosition);
+  transition: width 0.2s ease-in;
+}
+@mixin grid-images-container($grid-area) {
+  height: 100%;
+  display: block;
+  position: relative;
+  grid-area: $grid-area;
+
+  &:hover::after {
+    transition: opacity 0.2s ease-in;
+    opacity: 0.2;
+  }
+  &:hover .text {
+    transition: transform 0.2s ease-in, opacity 0.1s ease-in;
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+@mixin grid-images($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+%cross {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s ease-in;
+}
